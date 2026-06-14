@@ -12,6 +12,9 @@ touch /etc/config/ubootenv
 board=$(board_name)
 
 case "$board" in
+bell,xg-040g-md)
+	ubootenv_add_mtd "env" "0x0" "0x20000" "0x20000" "1"
+	;;
 gemtek,w1700k-ubi)
 	ubootenv_add_ubi_default
 	;;
