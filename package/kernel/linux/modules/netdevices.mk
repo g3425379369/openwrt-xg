@@ -680,7 +680,7 @@ define KernelPackage/airoha-eth
   KCONFIG:= \
 	CONFIG_NET_VENDOR_AIROHA \
 	CONFIG_NET_AIROHA \
-	CONFIG_NET_AIROHA_FLOW_STATS
+	CONFIG_NET_AIROHA_FLOW_STATS=y
   FILES:=$(LINUX_DIR)/drivers/net/ethernet/airoha/airoha-eth.ko
   AUTOLOAD:=$(call AutoLoad,19,airoha-eth,1)
 endef
